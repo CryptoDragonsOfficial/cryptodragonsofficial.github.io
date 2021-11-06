@@ -9,39 +9,12 @@ var fStokenDecimals = [];
 var fStokenContract = false;
 
 window.onload = function () {
-    newCounter();
+    initializePresaleCountdown();
 };
 
 const initializePresaleCountdown = () => {
-    const countDownDate = new Date("2021-11-15T00:00:00.0Z").getTime();
-    const x = setInterval(function () {
-        const now = new Date().getTime();
-        const distance = countDownDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("presale-countdown").innerHTML = `<div class="countdown">
-        <span>${days}<br/>Days</span>
-        <span>${hours}<br/>Hours</span>
-        <span>${minutes}<br/>Minutes</span>
-        <span>${seconds}<br/>Seconds</span>
-        </div>`
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("presale-countdown").style.display = "none"
-            document.getElementById("presale-button").style.display = "block"
-        }
-    }, 1000);
-}
-
-
-const newCounter = () => {
     var ringer = {
-        countdown_to: "11/15/2021",
+        countdown_to: "2021-11-15T00:00:00.0Z",
         rings: {
           'DAYS': { 
             s: 86400000, // mseconds in a day,
