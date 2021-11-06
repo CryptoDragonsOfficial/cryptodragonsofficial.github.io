@@ -3,6 +3,16 @@
     src: url('../assets/TheCheddarcake.ttf');
 }
 
+canvas {
+    width: 900px;
+    height: 200px;
+    display: block;
+    position: relative;
+    background: transparent;
+    margin: 25px auto;
+    padding-right: 15px;
+}
+
 header {
     display: flex;
     z-index: 50;
@@ -65,8 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 #presale-countdown {
     font-size: 3em;
     text-align: center;
-    position: absolute;
-    bottom: 50px;
+    position: relative;
     width: 100vw;
 }
 
@@ -120,15 +129,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-img {
-    left: 0;
-    right: 0;
-    max-width: 700px;
+    max-width: 600px;
     width: 100%;
     margin: auto;
     display: block;
     z-index: 2000;
-    position: absolute;
-    top: 100px;
 }
 
 #presale-button {
