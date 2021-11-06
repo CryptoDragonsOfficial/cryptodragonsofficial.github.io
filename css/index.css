@@ -1,6 +1,61 @@
+@font-face {
+    font-family: 'Cheddar';
+    src: url('../assets/TheCheddarcake.ttf');
+}
+
+header {
+    display: flex;
+    z-index: 50;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 310px;
+    justify-content: space-between;
+}
+
+header a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: #171515;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+  }
+  
+  header a:before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background: #d35400;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+  header a:hover:before {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #d35400;
+    filter: blur(3px);
+  }
+  
+  header a:hover {
+    color: #ffa502;
+    box-shadow: 0 0 15px #d35400;
+    text-shadow: 0 0 15px #d35400;
+  }
+
 span, p, h1, h2, h3, h4, h5, h6, div {
-    color: #f1f2f3;
-    font-family: 'Playfair Display', serif;
+    color: #858585;
+    font-family: 'Cheddar', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,57 +75,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
+    letter-spacing: 3px;
+}
+
+.countdown span {
+    margin: 15px 0px;
 }
 
 .lore-text {
     padding: 20px;
-}
-
-.social-link-discord {
-    position: absolute;
-    top: 10px;
-    z-index: 5000;
-    right: 150px;
-    font-size: 45px;
-    color: #fff;
-}
-
-.social-link-gitbook {
-    position: absolute;
-    top: 10px;
-    z-index: 5000;
-    right: 230px;
-    font-size: 45px;
-    color: #fff;
-}
-
-.social-link-gitbook img {
-    height: 60px;
-}
-
-.social-link-tg {
-    position: absolute;
-    top: 10px;
-    z-index: 5000;
-    right: 85px;
-    font-size: 45px;
-    color: #fff;
-}
-
-.social-link-twitter {
-    position: absolute;
-    top: 10px;
-    z-index: 5000;
-    right: 15px;
-    font-size: 45px;
-    color: #fff;
-}
-
-header {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    margin: auto;
 }
 
 .main-section, .section {
@@ -246,9 +259,11 @@ html, body {
   .foglayer_01 .image01, .foglayer_01 .image02,
   .foglayer_02 .image01, .foglayer_02 .image02,
   .foglayer_03 .image01, .foglayer_03 .image02 {
+    position: relative;
     float: left;
     height: 100%;
     width: 50%;
+    z-index: 5;
   }
   .foglayer_01 {
     -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
