@@ -41,12 +41,11 @@ const initializePresaleCountdown = () => {
 
 const newCounter = () => {
     var ringer = {
-        //countdown_to: "10/31/2014",
-        countdown_to: "10/31/2021",
+        countdown_to: "11/15/2021",
         rings: {
           'DAYS': { 
             s: 86400000, // mseconds in a day,
-            max: 365
+            max: 10
           },
           'HOURS': {
             s: 3600000, // mseconds per hour,
